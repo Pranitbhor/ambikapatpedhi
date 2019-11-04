@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Template by Quackit.com -->
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -15,12 +14,6 @@
     <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
     <link href="css/custom.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 <style>
 #header {
     position: relative;
@@ -43,6 +36,16 @@ color: #fff;
 }
 .footer-blurb {
     background-color: #c79163;
+}
+.dropdown-menu {
+    background-color: #c79163;
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover , .nav>li>a:focus, .nav>li>a:hover , .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+    background-color: #102669;
+    color: white;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 </style>
 </head>
@@ -77,31 +80,32 @@ color: #fff;
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav" style="font-size: 20px; float:right;">
                     <li class="active">
-                        <a href="#">Home</a>
+                        <a href="index.html">मुखपृष्ट</a>
                     </li>
                     <li>
-                        <a href="#">About</a>
+                        <a href="#">आमच्या विषयी</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="#">सुविधा</a>
                     </li>
                     <li>
-                        <a href="#">Deposit</a>
+                        <a href="#">फोटो गॅलरी</a>
                     </li>
-                    <li>
-                        <a href="#">Contact Us</a>
-                    </li>
-                    <li>
-                        <a href="#">Loan</a>
-                    </li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
+                    <li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ठेवी<span class="caret"></span></a>
 						<ul class="dropdown-menu" aria-labelledby="about-us">
-							<li><a href="#">Engage</a></li>
-							<li><a href="#">Pontificate</a></li>
-							<li><a href="#">Synergize</a></li>
+							<li><a href="#">गृह कर्ज</a></li>
+							<li><a href="#">वाहन कर्ज</a></li>
+							<li><a href="#">सोने कर्ज</a></li>
 						</ul>
 					</li>
+                    <li>
+                        <a href="#">संपर्क करा</a>
+                    </li>
+                    <li>
+                        <a href="emi.html">ईएमआय कॅल्क्युलेटर</a>
+                    </li>
+					
                 </ul>
 
 				

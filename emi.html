@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title></title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"/>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet"/>
+
+<style>
+#header {
+    position: relative;
+    height: auto;
+    top: 0;
+    transition: all 0.2s ease 0s;
+    width: 100%;
+    /* background-color: #fff; */
+}
+.nav.navbar-nav a{
+color: #fff;
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img {
+    width: 100%;
+    height: 100%;;
+}
+.feature {
+    background: #8bc9fc;
+    color: black;
+}
+.footer-blurb {
+    background-color: #c79163;
+}
+.dropdown-menu {
+    background-color: #c79163;
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover , .nav>li>a:focus, .nav>li>a:hover , .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+    background-color: #102669;
+    color: white;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+#border{
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#emi-calculation{
+  width: 500px;
+  height: 300px;
+  border: 2px solid steelblue;
+  box-shadow: 2px 5px 5px gray;
+  border-radius: 5px;
+   background-color: #CAFAFE;
+}
+#title{
+  font-size: 30px;
+  font-family: verdana;
+  color: steelblue;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#emi-output{
+  width: 500px;
+  height: 300px;
+  border: 2px solid steelblue;
+  box-shadow: 2px 5px 5px gray;
+  border-radius: 5px;
+  margin-top: 10px;
+   background-color: #CAFAFE;
+}
+
+.section{
+  margin-left: 10px;
+  font-size: 20px;
+  padding: 10px;
+  font-family: verdana;
+}
+.result{
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 20px;
+  padding: 5px;
+  font-family: verdana;
+}
+
+.input{
+  float: right;
+  height: 20px;
+  margin-right: 10px;
+}
+
+ #calc,#reset{
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  background-color: steelblue;
+  box-shadow: 2px 5px 5px gray; 
+}
+.submit{
+  text-align: center;
+  margin-top: 20px;
+}
+#reset{
+  background-color: orange;
+}
+
+@media screen and (max-width: 500px){
+  #border{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .label,.result{
+    font-size: 10px;
+  }
+  #title{
+    font-size: 20px;
+  }
+  #emi-calculation{
+    max-width: 100%;
+  }
+  #emi-output{
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .section{
+    font-size: 16px;
+  }
+  .input{
+    width: 100px;
+  }
+  #calc, #reset{
+    width: 100px;
+  }
+  
+}
+</style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div id="header">
+        <div class="">
+            <div class="">
+                <div class="logo" style="text-align: center;">
+                    <a href="./" title="">
+                        <img style="max-width: 100%;" src="image/logo.png" alt="Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-fixed-top" style="position: sticky;background-color: #c79163;margin-bottom: 0;" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <!-- <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-fire"></span> Logo</a>
+            </div> -->
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav" style="font-size: 20px; float:right;">
+                    <li class="active">
+                        <a href="index.html">मुखपृष्ट</a>
+                    </li>
+                    <li>
+                        <a href="#">आमच्या विषयी</a>
+                    </li>
+                    <li>
+                        <a href="#">सुविधा</a>
+                    </li>
+                    <li>
+                        <a href="#">फोटो गॅलरी</a>
+                    </li>
+                    <li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ठेवी<span class="caret"></span></a>
+						<ul class="dropdown-menu" aria-labelledby="about-us">
+							<li><a href="#">गृह कर्ज</a></li>
+							<li><a href="#">वाहन कर्ज</a></li>
+							<li><a href="#">सोने कर्ज</a></li>
+						</ul>
+					</li>
+                    <li>
+                        <a href="#">संपर्क करा</a>
+                    </li>
+                    <li>
+                        <a href="emi.html">ईएमआय कॅल्क्युलेटर</a>
+                    </li>
+					
+                </ul>
+
+				
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+	
+
+    <!-- Content -->
+    <div class="container" style="background-color: #c79163;">
+
+        <!-- Page Intro -->
+        <div class="row page-intro">
+            <div class="col-lg-12">
+                <h1>ईएमआय कॅल्क्युलेटर</h1>
+                <form class="form-horizontal well w3-center" style="max-width: 850px; width: 100%; margin: 0 auto;">
+  
+                    <div class="control-group">
+                      <label class="control-label">कर्जा ची रक्कम</label>
+                      <div class="controls">
+                        <input type="text" id="value1"></input>
+                      </div>
+                  </div>
+                                      <div class="control-group">
+                                          <label class="control-label">व्याज दर(%)</label>
+                                          <div class="controls">
+                                              <input type="text" id="value2"></input>
+                                          </div>
+                                      </div>
+                                      <div class="control-group">
+                                          <label class="control-label">कर्जा चा कालावधी महिन्यात</label>
+                                          <div class="controls">
+                                              <input type="text" id="value3"></input>
+                                          </div>
+                                      </div>
+                                      
+                                      <div class="control-group w3-margin-top">
+                                          <div class="controls">
+                                          <input type="button" class="w3-button w3-blue w3-padding-large" style="max-width: 200px; width: 100%;"  value="तपासा" onclick="calculation()"></input>
+                                      </div>
+                                      
+                                  </div>
+                  
+                  
+                  <h3 style="text-align: center;">तुमचा EMI</h3>
+                  
+                                <div class="control-group">
+                                  <label class="control-label">कर्जाचा हापता</label>
+                                  <div class="controls">
+                                    <span id="monthly-payment" style="vertical-align: -webkit-baseline-middle;"></span>
+                                  </div>
+                                </div>
+                  
+                  <div class="control-group">
+                    <label class="control-label">एकूण व्याज देय</label>
+                    <div class="controls">
+                      <span id="total-interest" style="vertical-align: -webkit-baseline-middle;"></span>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="control-group">
+                    <label class="control-label">देणे एकूण (मुख्य + व्याज)</label>
+                    <div class="controls">
+                      <span id="total-repayment" style="vertical-align: -webkit-baseline-middle;"></span>
+                    </div>
+                  </div>
+                  
+                  <div class="controls">
+                                          <input type="button" class="w3-button w3-blue w3-padding-large" style="max-width: 200px; width: 100%;"  value="पुन्हा तपासा" onclick="reset()"></input>
+                                      </div>
+                  
+                              </form>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+	
+	<footer style="bottom: 0px;">
+		<!-- <div class="footer-blurb">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 footer-blurb-item">
+						<img class="img-circle" src="image/deposit.jpg" alt="" width="100" height="100">
+						<h3>Deposit</h3>
+						<p>Wide variety of options to suit different needs, including Saving Deposit, Short Term Deposit, Recurring Deposit and Double Benefit Deposit.</p>
+						<p><a class="btn btn-default" href="#">READ MORE</a></p>
+					</div>
+					<div class="col-sm-4 footer-blurb-item">
+						<img class="img-circle" src="image/loan.jpg" alt="" width="100" height="100">
+						<h3>Loans</h3>
+						<p>We offer a tailor-made loan with flexible options to suit your pocket and your lifestyle.</p>
+						<p><a class="btn btn-default" href="#">READ MORE</a></p>
+					</div>
+					<div class="col-sm-4 footer-blurb-item">
+						<img class="img-circle" src="image/download.jpg" alt="" width="100" height="100">
+						<h3>Download Account Form</h3>
+						<p>Download forms for opening a new account, Senior Citizen Savings Scheme, applying for loan.</p>
+						<p><a class="btn btn-default" href="#">DOWNLOAD FORM</a></p>
+					</div>
+
+				</div>
+			</div>
+        </div> -->
+        
+        <div class="small-print">
+        	<div class="container">
+        		<p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
+        		<p>Copyright &copy; Example.com 2015 </p>
+        	</div>
+        </div>
+	</footer>
+
+	
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	<!-- IE10 viewport bug workaround -->
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+	
+	<!-- Placeholder Images -->
+	<script src="js/holder.min.js"></script>
+	<script>
+    function reset(){
+  document.getElementById("value1").value = 0;
+  document.getElementById("value2").value = 0;
+  document.getElementById("value3").value = 0;
+  
+  // document.getElementById("monthly-interest").innerHTML =" $ " +0;
+  document.getElementById("monthly-payment").innerHTML =" $ " +0;
+  document.getElementById("total-repayment").innerHTML =" $ " +0;
+  document.getElementById("total-interest").innerHTML =" $ " +0;
+}
+
+function calculation(){
+  
+  var loanAmount = document.getElementById("value1").value;
+  var interestRate = document.getElementById("value2").value;
+  var loanDuration = document.getElementById("value3").value;
+   
+  //.......... declarations.............
+  
+ var interestPerYear = (loanAmount * interestRate)/100; 
+ var monthlyInterest = interestPerYear/12;
+  
+  
+  var monthlyPayment = monthlyInterest + (loanAmount/loanDuration);
+  var totalInterestCost = monthlyInterest * loanDuration;
+  var totalRepayment = monthlyPayment * loanDuration;
+  
+  //----------------monthly interest----------------------
+  
+ // document.getElementById("monthly-interest").innerHTML = " $ " +monthlyInterest.toFixed(2);
+  
+ //-------------Monthly payment------------
+  
+   document.getElementById("monthly-payment").innerHTML = " रु " +monthlyPayment; 
+  
+  //-------------Total repayment-----------
+  
+  document.getElementById("total-repayment").innerHTML =" रु " +totalRepayment.toFixed(2);
+  
+  //--------------Total Interest cost----------------
+  
+  document.getElementById("total-interest").innerHTML =" रु " +totalInterestCost.toFixed(2);
+  
+}
+    </script>
+</body>
+
+</html>
