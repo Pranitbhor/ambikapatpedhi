@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title></title>
+    <title>श्री अंबिका ग्रामीण बिगरशेती सहकारी पतसंस्था मर्या. खोडद</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -17,6 +17,9 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet"/>
 
 <style>
+  .active {
+    background-color: #102669;
+}
 #header {
     position: relative;
     height: auto;
@@ -51,110 +54,12 @@ color: #fff;
 }
 
 
-#border{
- display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-#emi-calculation{
-  width: 500px;
-  height: 300px;
-  border: 2px solid steelblue;
-  box-shadow: 2px 5px 5px gray;
-  border-radius: 5px;
-   background-color: #CAFAFE;
-}
-#title{
-  font-size: 30px;
-  font-family: verdana;
-  color: steelblue;
-  text-align: center;
-  text-decoration: underline;
-}
-
-#emi-output{
-  width: 500px;
-  height: 300px;
-  border: 2px solid steelblue;
-  box-shadow: 2px 5px 5px gray;
-  border-radius: 5px;
-  margin-top: 10px;
-   background-color: #CAFAFE;
-}
-
-.section{
-  margin-left: 10px;
-  font-size: 20px;
-  padding: 10px;
-  font-family: verdana;
-}
-.result{
-  margin-top: 20px;
-  margin-left: 10px;
-  font-size: 20px;
-  padding: 5px;
-  font-family: verdana;
-}
-
-.input{
-  float: right;
-  height: 20px;
-  margin-right: 10px;
-}
-
- #calc,#reset{
-  width: 200px;
-  height: 30px;
-  font-size: 20px;
-  background-color: steelblue;
-  box-shadow: 2px 5px 5px gray; 
-}
-.submit{
-  text-align: center;
-  margin-top: 20px;
-}
-#reset{
-  background-color: orange;
-}
-
-@media screen and (max-width: 500px){
-  #border{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  .label,.result{
-    font-size: 10px;
-  }
-  #title{
-    font-size: 20px;
-  }
-  #emi-calculation{
-    max-width: 100%;
-  }
-  #emi-output{
-    width: 100%;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  .section{
-    font-size: 16px;
-  }
-  .input{
-    width: 100px;
-  }
-  #calc, #reset{
-    width: 100px;
-  }
-  
-}
 </style>
 </head>
 
-<body>
+<body style="    color: #ffffff;
+background-color: #abd8fd;padding: 0;">
 
     <!-- Navigation -->
     <div id="header">
@@ -183,7 +88,7 @@ color: #fff;
             <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav" style="font-size: 20px; float:right;">
-                    <li class="active">
+                    <li >
                         <a href="index.html">मुखपृष्ट</a>
                     </li>
                     <li>
@@ -193,7 +98,7 @@ color: #fff;
                         <a href="#">सुविधा</a>
                     </li>
                     <li>
-                        <a href="#">फोटो गॅलरी</a>
+                        <a href="gallery.html">फोटो गॅलरी</a>
                     </li>
                     <li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ठेवी<span class="caret"></span></a>
@@ -206,7 +111,7 @@ color: #fff;
                     <li>
                         <a href="#">संपर्क करा</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="emi.html">ईएमआय कॅल्क्युलेटर</a>
                     </li>
 					
@@ -223,13 +128,21 @@ color: #fff;
 	
 
     <!-- Content -->
-    <div class="container" style="background-color: #c79163;">
+    <div class="container" style="margin-bottom: 65px;">
 
         <!-- Page Intro -->
         <div class="row page-intro">
-            <div class="col-lg-12">
-                <h1>ईएमआय कॅल्क्युलेटर</h1>
-                <form class="form-horizontal well w3-center" style="max-width: 850px; width: 100%; margin: 0 auto;">
+            <!-- <div class="col-lg-12"> -->
+                <h1 style="
+                font-weight: bold;
+                font-size: 30px;
+                margin-bottom: 15px;
+                display: block;
+                border-bottom: 1px solid;
+                padding-bottom: 9px;
+                text-align: center;
+                text-transform: uppercase;">ईएमआय कॅल्क्युलेटर</h1>
+                <!-- <form class="form-horizontal well w3-center" style="max-width: 850px; width: 100%; margin: 0 auto;">
   
                     <div class="control-group">
                       <label class="control-label">कर्जा ची रक्कम</label>
@@ -286,14 +199,124 @@ color: #fff;
                                           <input type="button" class="w3-button w3-blue w3-padding-large" style="max-width: 200px; width: 100%;"  value="पुन्हा तपासा" onclick="reset()"></input>
                                       </div>
                   
-                              </form>
+                              </form> -->
+            <!-- </div> -->
+
+<style>
+  .emi-calc {
+    margin: 0px auto;
+    background: #c79163;
+    border: 1px solid #e6c534;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 500px;
+    /* height: 515px; */
+    font-size: 20px;
+    color: #000;
+}
+#calc {
+    width: 465px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+#calc li {
+    margin: 10px;
+    list-style-type: none;
+}
+
+#calc li button {
+    margin-right: 5px;
+    width: 48%;
+    background: #102669;
+    border: none;
+    color: #fff;
+    margin-top: 10px;
+}
+
+#calc li span {
+    display: inline-block;
+    color: #000;
+}
+
+#calc li input {
+    float: right;
+    line-height: 25px;
+    border-radius: 7px;
+}
+
+.result {
+    background-color: #abd8fd;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.result h2 {
+    border-bottom: 1px solid #ccc;
+    display: block;
+}
+  </style>
+
+            <div class="emi-calc">
+
+
+
+                <ul id="calc">
+                    <!-- <h4 class="text-center">भरवायचे रकाने </h4> -->
+                    <li><span>कर्जाची संख्या </span><input id="loan1"></li>
+                    <li><span>कर्जाचा कालावधी (महिने)</span><input id="months1"></li>
+                    <li><span> व्याजदर </span><input id="rate1" onchange="emi();"></li>
+                    <li><button type="button" onclick="emi()"> निकाल दाखवा </button><button type="reset" onclick="reset()">पूर्ववत करा </button></li>
+                    <div class="result">
+                        <h4 class="text-center">इ. एम. आई निकाल </h4>
+                        <li><span>इ . एम . आई </span><input id="pay1"></li>
+                        <li><span>भरावयाचे व्याज </span><input id="tintt1"></li>
+                        <li><span>भरावयाची किमंत </span><input id="gt1"></li>
+                    </div>
+                </ul>
+
+
             </div>
         </div>
+        <script>
+          function reset(){
+  document.getElementById("loan1").value = '';
+  document.getElementById("months1").value = '';
+  document.getElementById("rate1").value = '';
+  
+  document.getElementById("pay1").value = '';
+  document.getElementById("tintt1").value = '';
+  document.getElementById("gt1").value = '';
+  // // document.getElementById("monthly-interest").innerHTML =" $ " +0;
+  // document.getElementById("monthly-payment").innerHTML =" $ " +0;
+  // document.getElementById("total-repayment").innerHTML =" $ " +0;
+  // document.getElementById("total-interest").innerHTML =" $ " +0;
+}
+function emi() {
+    if (document.getElementById('loan1').value == null || document.getElementById('loan1').value.length == 0 || document.getElementById('months1').value == null || document.getElementById('months1').value.length == 0 || document.getElementById('rate1').value == null || document.getElementById('rate1').value.length == 0) {
+        document.getElementById('pay1').value = "Data Reqd.";
+    } else {
+        var pay1 = '';
+        var princ1 = document.getElementById('loan1').value;
+        var term1 = document.getElementById('months1').value;
+        var intr1 = document.getElementById('rate1').value / 1200;
+        document.getElementById('pay1').value = ((princ1 * intr1 / (1 - (Math.pow(1 / (1 + intr1), term1))) * 100) / 100).toFixed(2);
+        document.getElementById('gt1').value = (((document.getElementById('pay1').value * document.getElementById('months1').value) * 100) / 100).toFixed(2);
+        document.getElementById('tintt1').value = (((document.getElementById('gt1').value * 1 - document.getElementById('loan1').value * 1) * 100) / 100).toFixed(2);
+    }
+}
+                </script>
 
     </div>
     <!-- /.container -->
 	
-	<footer style="bottom: 0px;">
+	<footer style="bottom: 0px;   
+  width: 100%;">
 		<!-- <div class="footer-blurb">
 			<div class="container">
 				<div class="row">
@@ -320,7 +343,7 @@ color: #fff;
 			</div>
         </div> -->
         
-        <div class="small-print">
+        <div class="small-print" style="background-color: #000;">
         	<div class="container">
         		<p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
         		<p>Copyright &copy; Example.com 2015 </p>
@@ -340,7 +363,7 @@ color: #fff;
 	
 	<!-- Placeholder Images -->
 	<script src="js/holder.min.js"></script>
-	<script>
+	<!-- <script>
     function reset(){
   document.getElementById("value1").value = 0;
   document.getElementById("value2").value = 0;
@@ -385,7 +408,7 @@ function calculation(){
   document.getElementById("total-interest").innerHTML =" रु " +totalInterestCost.toFixed(2);
   
 }
-    </script>
+    </script> -->
 </body>
 
 </html>
