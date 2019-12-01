@@ -17,8 +17,14 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet"/>
 
 <style>
+    body {
+  background-color: #e6f4fe;
+}
+    .navbar-fixed-top {
+    border: unset;
+}
   .active {
-    background-color: #102669;
+    background-color: #c79163;
 }
 #header {
     position: relative;
@@ -43,7 +49,7 @@ color: #fff;
     background-color: #c79163;
 }
 .dropdown-menu {
-    background-color: #c79163;
+    background-color: #337ab7;
 }
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover , .nav>li>a:focus, .nav>li>a:hover , .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
     background-color: #102669;
@@ -53,13 +59,24 @@ color: #fff;
   display: block;
 }
 
+.breadcumb {
+  margin: 10px 0px;
+}
 
+.breadcumbHead{	
+    font-size: 30px;
+    padding: 0px 5px 0px 20px;
+    color: #282828;
+    text-align: left;
+    background: url(http://kulswami.com/images/yellow-curve.png) no-repeat;
+    width: 265px;
+    background-size: cover;
+}
 
 </style>
 </head>
 
-<body style="    color: #ffffff;
-background-color: #abd8fd;padding: 0;">
+<body style="    color: #ffffff;padding: 0;">
 
     <!-- Navigation -->
     <div id="header">
@@ -73,7 +90,7 @@ background-color: #abd8fd;padding: 0;">
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-fixed-top" style="position: sticky;background-color: #c79163;margin-bottom: 0;" role="navigation">
+    <nav class="navbar navbar-fixed-top" style="position: sticky;background-color: #337ab7;margin-bottom: 0;" role="navigation">
         <div class="container">
             <!-- Logo and responsive toggle -->
             <!-- <div class="navbar-header">
@@ -97,6 +114,12 @@ background-color: #abd8fd;padding: 0;">
                     <li>
                         <a href="#">सुविधा</a>
                     </li>
+                    <li>
+                        <a href="branches.html">शाखा</a>
+                    </li>
+                    <li>
+                            <a href="ahval.html">अहवाल</a>
+                        </li>
                     <li>
                         <a href="gallery.html">फोटो गॅलरी</a>
                     </li>
@@ -128,12 +151,19 @@ background-color: #abd8fd;padding: 0;">
 	
 
     <!-- Content -->
-    <div class="container" style="margin-bottom: 65px;">
+    <div class="container" style="margin-bottom: 65px;box-shadow: 0 -4px 0 #c79163 inset, 0 0 20px rgba(0, 0, 0, 0.1);">
 
         <!-- Page Intro -->
+        <div class="breadcumb">
+                <div class="container padding0">
+                  <div class="col-md-2 breadcumbHead col-sm-3">ईएमआय कॅल्क्युलेटर</div>
+                    
+               
+                </div>
+              </div>
         <div class="row page-intro">
             <!-- <div class="col-lg-12"> -->
-                <h1 style="
+                <!-- <h1 style="
                 font-weight: bold;
                 font-size: 30px;
                 margin-bottom: 15px;
@@ -141,7 +171,9 @@ background-color: #abd8fd;padding: 0;">
                 border-bottom: 1px solid;
                 padding-bottom: 9px;
                 text-align: center;
-                text-transform: uppercase;">ईएमआय कॅल्क्युलेटर</h1>
+                text-transform: uppercase;">ईएमआय कॅल्क्युलेटर</h1> -->
+
+
                 <!-- <form class="form-horizontal well w3-center" style="max-width: 850px; width: 100%; margin: 0 auto;">
   
                     <div class="control-group">
